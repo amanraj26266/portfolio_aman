@@ -5,6 +5,8 @@ body {
 
 }
 
+/* here we are desing the css part of nav bar */
+
 nav {
   position: fixed;
   z-index: 1000;
@@ -176,6 +178,8 @@ img {
   text-align: center;
   height: 100vh;
   padding-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .skills h2 {
@@ -207,6 +211,9 @@ img {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
 
 }
 
@@ -301,8 +308,12 @@ img {
 }
 
 .div1 #message {
+  width: 400px;
   min-height: 100px;
   font-size: 20px;
+  border: none;
+  border-radius: 10px;
+
 }
 
 .div1 button {
@@ -316,6 +327,11 @@ img {
   align-self: flex-start;
   font-size: 20px;
   height: 40px;
+}
+
+.div1 button:hover {
+  background-color: white;
+  color: red;
 }
 
 .div2 {

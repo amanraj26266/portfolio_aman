@@ -10,8 +10,9 @@ const Skills = () => {
         {skills.map((skill) => (
           <div className="skill-item" key={skill.id}>
             <img src={skill.Image} alt={skill.title} />
-            <h3>{skill.title}</h3>
+            {skill.title}
           </div>
+
         ))}
       </div>
     </div>

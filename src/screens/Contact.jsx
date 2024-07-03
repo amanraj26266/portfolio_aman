@@ -1,6 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_rngpfcs', 'template_gtfx5xp', form.current, {
+        publicKey: 'erXteUDMn9_e1KyIS',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          e.target.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          e.target.reset();
+        },
+      );
+  };
+
   return (
     <>
       <div id='contact'>
@@ -19,15 +41,18 @@ const Contact = () => {
 
           </div>
           <div className="div1">
-            <h2>write me a message</h2>
-            <div className="inp">
+            <h2>Write Me A Message</h2>
+            <div className="inp" ref={form} onSubmit={sendEmail}>
+
               <label htmlFor="">Your Name </label>
-              <input type="text" />
+              <input type="text" name='user_name' />
               <label htmlFor="">Your Email</label>
-              <input type="email" name="" id="" />
+              <input type="email" name="user_email" id="" />
               <label htmlFor="">Your Message</label>
-              <input type="text" id='message' />
-              <button type="submit">Submit</button>
+              {/* <input type="text" id='message' name='message' /> */}
+              <textarea name="message" id="message"></textarea>
+              <button type="submit"  >Submit</button>
+
             </div>
           </div>
 
