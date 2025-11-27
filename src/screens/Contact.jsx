@@ -42,19 +42,18 @@ const Contact = () => {
           </div>
           <div className="div1">
             <h2>Write Me A Message</h2>
-            <div className="inp" ref={form} onSubmit={sendEmail}>
-
-              <label htmlFor="">Your Name </label>
-              <input type="text" name='user_name' />
-              <label htmlFor="">Your Email</label>
-              <input type="email" name="user_email" id="" />
-              <label htmlFor="">Your Message</label>
-              {/* <input type="text" id='message' name='message' /> */}
-              <textarea name="message" id="message"></textarea>
-              <button type="submit"  >Submit</button>
-
-            </div>
+          <form className="inp" ref={form} onSubmit={sendEmail}>
+            <label htmlFor="">Your Name </label>
+            <input type="text" name='user_name' />
+            <label htmlFor="">Your Email</label>
+            <input type="email" name="user_email" id="" />
+            <label htmlFor="">Your Message</label>
+            <textarea name="message" id="message"></textarea>
+            <button type="submit">Submit</button>
+          </form>
           </div>
+
+
 
 
         </div>
